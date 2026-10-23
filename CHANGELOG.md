@@ -1,12 +1,21 @@
 # CHANGELOG
 
-Adds **USB drive mode**, which shows the SD card on a computer as a USB drive so games can be added without taking the card out, and an **overscan fix** for the menus.
+**v0.15.1** adds a PicoNES PCB design with SNES controller ports. The emulator is unchanged from v0.15.
 
 # General Info
 
 [Binaries for each configuration and PCB design are at the end of this page](#downloads___).
 
 [See setup section in in Pico-infoNesPlus readme how to install and wire up](https://github.com/PicoPlus-devel/pico-infonesPlus#pico-setup)
+
+# v0.15.1 Release notes
+
+## What's new
+
+- **PicoNES PCB with SNES controller ports.** PCB design v2.8, designed by John Edgar Park ([@johnedgarpark](https://twitter.com/johnedgarpark)), has two SNES controller ports, so original SNES controllers plug in without an adapter cable. The Gerber file `pico_nesPCB_v2.8_SNES_PORTS.zip` is attached below. See [Custom PCBs](https://github.com/PicoPlus-devel/pico-peanutGB#picones-pcb) in the readme.
+- All PCB designs, with parts lists and pictures, are now described in the [PCB README](https://github.com/PicoPlus-devel/pico_shared/blob/main/PCB/README.md).
+
+The binaries are the same as in v0.15.
 
 # v0.15 Release notes
 
@@ -295,11 +304,13 @@ For some configurations risc-v binaries are available. It is recommended however
 
 | Board | Binary | Readme |
 |:--|:--|:--|
-| Pico 2 | [PicoPeanutGB_AdafruitDVISD_pico2_arm.uf2](https://github.com/PicoPlus-devel/pico-peanutGB/releases/latest/download/PicoPeanutGB_AdafruitDVISD_pico2_arm.uf2) | [Readme](https://github.com/PicoPlus-devel/pico-infonesPlus/blob/main/README.md#pcb-with-raspberry-pi-pico-or-pico-2) |
-| Pico 2 W | [PicoPeanutGB_AdafruitDVISD_pico2_w_arm.uf2](https://github.com/PicoPlus-devel/pico-peanutGB/releases/latest/download/PicoPeanutGB_AdafruitDVISD_pico2_w_arm.uf2) | [Readme](https://github.com/PicoPlus-devel/pico-infonesPlus/blob/main/README.md#pcb-with-raspberry-pi-pico-or-pico-2) |
-| Pico **(RP2040, DMG only)** | [PicoPeanutGB_AdafruitDVISD_pico_arm.uf2](https://github.com/PicoPlus-devel/pico-peanutGB/releases/latest/download/PicoPeanutGB_AdafruitDVISD_pico_arm.uf2) | [Readme](https://github.com/PicoPlus-devel/pico-infonesPlus/blob/main/README.md#pcb-with-raspberry-pi-pico-or-pico-2) |
+| Pico 2 | [PicoPeanutGB_AdafruitDVISD_pico2_arm.uf2](https://github.com/PicoPlus-devel/pico-peanutGB/releases/latest/download/PicoPeanutGB_AdafruitDVISD_pico2_arm.uf2) | [Readme](https://github.com/PicoPlus-devel/pico-peanutGB#picones-pcb) |
+| Pico 2 W | [PicoPeanutGB_AdafruitDVISD_pico2_w_arm.uf2](https://github.com/PicoPlus-devel/pico-peanutGB/releases/latest/download/PicoPeanutGB_AdafruitDVISD_pico2_w_arm.uf2) | [Readme](https://github.com/PicoPlus-devel/pico-peanutGB#picones-pcb) |
+| Pico **(RP2040, DMG only)** | [PicoPeanutGB_AdafruitDVISD_pico_arm.uf2](https://github.com/PicoPlus-devel/pico-peanutGB/releases/latest/download/PicoPeanutGB_AdafruitDVISD_pico_arm.uf2) | [Readme](https://github.com/PicoPlus-devel/pico-peanutGB#picones-pcb) |
 
-PCB [pico_nesPCB_v2.6.zip](https://github.com/PicoPlus-devel/pico-peanutGB/releases/latest/download/pico_nesPCB_v2.6.zip)
+PCB with NES controller ports: [pico_nesPCB_v2.6.zip](https://github.com/PicoPlus-devel/pico-peanutGB/releases/latest/download/pico_nesPCB_v2.6.zip)
+
+PCB with SNES controller ports: [pico_nesPCB_v2.8_SNES_PORTS.zip](https://github.com/PicoPlus-devel/pico-peanutGB/releases/latest/download/pico_nesPCB_v2.8_SNES_PORTS.zip)
 
 3D-printed case designs for PCB:
 
@@ -373,6 +384,12 @@ There is no Pico 2 W binary for this board.
 
 
 Extract the zip file to the root folder of the SD card. Select a game in the menu and press START to show more information and box art. Works for most official released games. Screensaver shows floating random cover art.
+
+- PCB Gerber files. Upload the zip file unchanged to a PCB manufacturer. See the [PCB README](https://github.com/PicoPlus-devel/pico_shared/blob/main/PCB/README.md) for parts lists and build instructions.
+  - PicoNES v2.6, NES controller ports: [pico_nesPCB_v2.6.zip](https://github.com/PicoPlus-devel/pico-peanutGB/releases/latest/download/pico_nesPCB_v2.6.zip)
+  - PicoNES v2.8, SNES controller ports: [pico_nesPCB_v2.8_SNES_PORTS.zip](https://github.com/PicoPlus-devel/pico-peanutGB/releases/latest/download/pico_nesPCB_v2.8_SNES_PORTS.zip)
+  - PicoNES Mini (Waveshare RP2350-Zero): [Gerber_PicoNES_Mini_PCB_v2.0.zip](https://github.com/PicoPlus-devel/pico-peanutGB/releases/latest/download/Gerber_PicoNES_Mini_PCB_v2.0.zip)
+  - PicoNES Micro (Waveshare RP2350-USB-A): [Gerber_PicoNES_Micro_v1.2.zip](https://github.com/PicoPlus-devel/pico-peanutGB/releases/latest/download/Gerber_PicoNES_Micro_v1.2.zip)
 
 
 
